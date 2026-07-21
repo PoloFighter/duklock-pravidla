@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pravidlá Streamu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://yt3.googleusercontent.com/TCl7u351pzOB9ERvwT6wnXXaRU062UN5lTKyloIQ5X89PBpKhaWNkwq73fKJueHom0YNXSY5Ug=s800-c-k-c0x00ffffff-no-rj">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Duklock pravidlá Streamu</h1>
+            <button id="theme-toggle" aria-label="Toggle color scheme">
+                <span id="theme-icon" class="material-symbols-outlined">light_mode</span>
+            </button>
+
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="rules">
+                <h1>Pravidlá Streamu</h1>
+                <p>Tieto pravidlá platia pre všetky streamy aj na <a target="_blank" href="https://youtube.com/duklock">Hlavnom Kanáli</a> aj na <a target="_blank" href="https://youtube.com/duklockplus">DuklockPlus</a>.</p>
+                <ul>
+                    <li>Nepýtajte sa hru, je vždy v popise</li>
+                    <li>Predtým, než sa niečo opýtaš, prečítaj si popisok streamu. Ak sa otázky zodpovedané v ňom budú opakovať, dostanete timeout a potom ban.</li>
+                    <li>Nepýtajte sa hru</li>
+                    <li>Sex me now</li>
+                    <li>Nepýtajte sa hru</li>
+                    <li>Sex me now</li>
+                    <li>Nepýtajte sa hru</li>
+                    <li>Sex me now</li>
+                    <li>Nepýtajte sa hru</li>
+                    <li>Sex me now</li>
+                    <li>Nepýtajte sa hru</li>
+                    <li>Sex me now</li>
+
+                </ul>
+
+                <h1>Nightbot commandy AKA časté otázky</h1>
+                <ul class="commands">
+                    <li>!hra</li>
+                    <h4>Hra je vždy v <strong>popise streamu</strong></h4>
+                    <li>!otazky</li>
+                    <h4>Predtým, než sa niečo opýtaš, prečítaj si popisok streamu. Ak sa otázky zodpovedané v ňom budú opakovať, dostanete timeout a potom ban.</h4>
+                    <li>!zaznam</li>
+                    <h4>Záznam je vždy pre <strong>členov</strong></h4>
+                    <li>!prvedojmy</li>
+                    <h4>Prvé dojmy sú <strong>verejné</strong> pre všetkých</h4>
+                    <li>!bttv</li>
+                    <h4>Nevidíš emotes ako PepeLaugh alebo Aware? Rozšírenie pre animované emotes nájdeš na: <a href="https://betterttv.com" target="_blank" rel="noopener noreferrer">betterttv.com</a> (funguje iba pre PC sledovateľov streamu)</h4>
+                </ul>
+            </div>
+            <div class="currentStream">
+                <h3>Momentálny stream</h3>
+                <div id="live-wrap">
+                    <iframe id="live-player" width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCIAbC7emlDQs-dmgW4GlgnA&autoplay=0" title="DuklockPlus Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div id="live-fallback">
+                        <span class="material-symbols-outlined">videocam_off</span>
+                        <p>Stream momentálne offline</p>
+                    </div>
+                </div>
+                <h3>Najnovšie video z DuklockPlus</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUIAbC7emlDQs-dmgW4GlgnA" title="Najnovšie video z DuklockPlus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>
+            </div>
+        </div>
+        <footer>
+            <a href="https://youtube.com/duklock">Hlavný Kanál</a>
+            <dot></dot>
+            <a href="https://youtube.com/duklockplus">Herný Kanál</a>
+            <dot></dot>
+            <a href="https://www.rohlik.cz/hledat/znacka/qapka?q=Qapka&companyId=1">Qapka</a>
+            <dot></dot>
+            <a href="https://www.madmonq.gg/duklock">Madmonq.gg/Duklock</a>
+            <dot></dot>
+            <a href="https://alecau.com">Merch</a>
+            <dot></dot>
+            <a href="https://discord.gg/duklock">Discord</a>
+            <dot></dot>
+            <a href="https://reddit.com/r/Duklock">Reddit</a>
+            <dot></dot>
+            <a href="https://instagram.com/duklock">Instagram</a>
+            <dot></dot>
+            <a href="https://twitter.com/duklocktweet">Twitter/X</a>
+        </footer>
+    </main>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+    (function(){
+        let resolved = false;
+
+        window.onYouTubeIframeAPIReady = function() {
+            new YT.Player('live-player', {
+                events: {
+                    'onError': () => setOffline(),
+                    'onStateChange': (e) => {
+                        if (e.data === YT.PlayerState.PLAYING || e.data === YT.PlayerState.BUFFERING) {
+                            setOnline();
+                        }
+                    }
+                }
+            });
+        };
+
+        function setOnline(){
+            if (resolved) return;
+            resolved = true;
+        }
+
+        function setOffline(){
+            if (resolved) return;
+            resolved = true;
+            document.getElementById('live-player').style.display = 'none';
+            document.getElementById('live-fallback').style.display = 'flex';
+        }
+    })();
+    (function(){
+        const toggle = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+        const root = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        const prefersDarkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+        const prefersDark = prefersDarkMedia.matches;
+
+        function setIcon(mode){
+            if(!icon) return;
+            icon.textContent = mode === 'dark' ? 'dark_mode' : 'light_mode';
+        }
+
+        function applyTheme(theme){
+            if(theme === 'dark') root.setAttribute('data-theme','dark');
+            else if(theme === 'light') root.setAttribute('data-theme','light');
+            else root.removeAttribute('data-theme');
+            setIcon(theme === 'dark' ? 'dark' : 'light');
+
+            // Fallback: set inline CSS variables so theme takes effect immediately
+            const cs = getComputedStyle(root);
+            const lbg = cs.getPropertyValue('--light-bg').trim() || '#ffffff';
+            const ltext = cs.getPropertyValue('--light-text').trim() || '#0b1220';
+            const lheader = cs.getPropertyValue('--light-header').trim() || '#eef2ff';
+            const dbg = cs.getPropertyValue('--dark-bg').trim() || '#071124';
+            const dtext = cs.getPropertyValue('--dark-text').trim() || '#e6eef8';
+            const dheader = cs.getPropertyValue('--dark-header').trim() || '#0b1b2b';
+
+            if(theme === 'dark'){
+                root.style.setProperty('--bg', `linear-gradient(180deg, ${dbg}, ${dheader})`);
+                root.style.setProperty('--text', dtext);
+                root.style.setProperty('--header-bg', `linear-gradient(0deg, ${dheader}, transparent)`);
+            } else {
+                root.style.setProperty('--bg', `linear-gradient(180deg, ${lbg}, ${lheader})`);
+                root.style.setProperty('--text', ltext);
+                root.style.setProperty('--header-bg', `linear-gradient(0deg, ${lheader}, transparent)`);
+            }
+        }
+
+        const initial = stored || (prefersDark ? 'dark' : 'light');
+        applyTheme(initial);
+
+        toggle.addEventListener('click', ()=>{
+            const current = root.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem('theme', next);
+        });
+
+        prefersDarkMedia.addEventListener('change', e => {
+            if(!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+        });
+    })();
+    </script>
+</body>
+</html>
