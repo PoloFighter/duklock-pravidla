@@ -99,7 +99,7 @@ iframe {
     height: auto;
     border-radius: 16px;
 }
-main ul {
+.rules {
     font-size: 1.2rem;
     list-style-type:decimal;
     max-width: 60%;
@@ -259,7 +259,7 @@ strong {
     dot {
         margin: 0 0.5rem;
     }
-    main ul {
+    .rules {
         max-width: 100%;
     }
     .commands li {
