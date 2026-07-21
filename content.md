@@ -1,3 +1,4 @@
+<!-- pre editovanie odporúčam online markdown editor ako napr. https://stackedit.io  -->
 ## Pravidlá Streamu
 
 Tieto pravidlá platia pre všetky streamy aj na [Hlavnom Kanáli](https://youtube.com/duklock) aj na [DuklockPlus](https://youtube.com/duklockplus).
