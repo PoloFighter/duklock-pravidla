@@ -135,7 +135,6 @@
             else root.removeAttribute('data-theme');
             setIcon(theme === 'dark' ? 'dark' : 'light');
 
-            // Fallback: set inline CSS variables so theme takes effect immediately
             const cs = getComputedStyle(root);
             const lbg = cs.getPropertyValue('--light-bg').trim() || '#ffffff';
             const ltext = cs.getPropertyValue('--light-text').trim() || '#0b1220';
