@@ -8,17 +8,17 @@ Tieto pravidlá platia pre všetky streamy aj na [Hlavnom Kanáli](https://youtu
 
 ## Nightbot commandy AKA časté otázky
 
-- **!hra**
+- **!hra**<br>
   Hra je vždy v *popise streamu*.
 
-- **!otazky**
+- **!otazky**<br>
   Predtým, než sa niečo opýtaš, prečítaj si popisok streamu. Ak sa otázky zodpovedané v ňom budú opakovať, dostanete timeout a potom ban.
 
-- **!zaznam**
+- **!zaznam**<br>
   Záznam je vždy pre *členov*.
 
-- **!prvedojmy**
+- **!prvedojmy**<br>
   Prvé dojmy sú *verejné* pre všetkých.
 
-- **!bttv**
+- **!bttv**<br>
   Nevidíš emotes ako PepeLaugh alebo Aware? Rozšírenie pre animované emotes nájdeš na: [betterttv.com](https://betterttv.com) (funguje iba pre PC sledovateľov streamu)
