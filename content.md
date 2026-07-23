@@ -26,3 +26,10 @@ Tieto pravidlá platia pre všetky streamy aj na [Hlavnom Kanáli](https://youtu
 
 - **!bttv**<br>
   Nevidíš emotes ako PepeLaugh alebo Aware? Rozšírenie pre animované emotes nájdeš na: [betterttv.com](https://betterttv.com) (funguje iba pre PC sledovateľov streamu)
+
+## Scary alerty počas horroroviek
+
+-  Klopanie
+   5€
+-  Jumpscare
+   od 7€ do 19€
