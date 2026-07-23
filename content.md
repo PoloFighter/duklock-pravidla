@@ -29,7 +29,7 @@ Tieto pravidlá platia pre všetky streamy aj na [Hlavnom Kanáli](https://youtu
 
 ## Scary alerty počas horroroviek
 
--  Klopanie
+-  **Klopanie**<br>
    5€
--  Jumpscare
+-  **Jumpscare**<br>
    od 7€ do 19€
